@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="todo.controller.MainController">
+    <top>
+        <ToolBar>
+            <Button text="Добавить задачу" onAction="#handleAddTask"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="taskTable">
+            <columns>
+                <TableColumn text="Название" fx:id="titleColumn"/>
+                <TableColumn text="Описание" fx:id="descriptionColumn"/>
+                <TableColumn text="Дата" fx:id="dueDateColumn"/>
+                <TableColumn text="Категория" fx:id="categoryColumn"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
